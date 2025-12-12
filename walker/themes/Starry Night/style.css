@@ -1,0 +1,193 @@
+* {
+    all: unset;
+}
+
+* {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 16px;
+    color: var(--text);
+}
+
+scrollbar {
+    opacity: 0;
+}
+
+.normal-icons {
+    -gtk-icon-size: 18px;
+}
+
+.large-icons {
+    -gtk-icon-size: 36px;
+}
+
+.box-wrapper {
+    background: rgba(12, 17, 29, 0.85); /* Dark navy background */
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(60px);
+    padding: 0;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Light white border */
+    border-radius: 16px;
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.6),
+        0 0 0 0.5px rgba(255, 255, 255, 0.1) inset,
+        0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.preview-box {
+    background: rgba(12, 17, 29, 0.7); /* Darker navy for preview */
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+}
+
+.box {
+    background: transparent;
+}
+
+.search-container {
+    background: transparent;
+    padding: 12px 14px 8px 14px;
+}
+
+.input {
+    background: rgba(
+        10,
+        13,
+        22,
+        0.6
+    ); /* Darker navy with a slight glow effect */
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: 1.5px solid rgba(255, 255, 255, 0.2); /* Light border for contrast */
+    transition: all 0.2s ease;
+}
+
+.input::placeholder {
+    opacity: 0.4;
+    font-weight: 400;
+}
+
+.input:focus,
+.input:active {
+    background: rgba(10, 13, 22, 0.8); /* Darker gray background when focused */
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1.5px solid rgba(255, 255, 255, 0.6); /* Lighter gray border */
+    box-shadow: 0 0 0 3px rgba(100, 150, 255, 0.2); /* Neon blue glow on focus */
+    outline: none;
+}
+
+.content-container {
+    padding: 6px;
+    background: transparent;
+}
+
+.placeholder {
+    opacity: 0.5;
+    padding: 30px 16px;
+    text-align: center;
+}
+
+.scroll {
+    background: transparent;
+}
+
+.list {
+    background: transparent;
+}
+
+child,
+child > * {
+    transition: all 0.15s ease;
+}
+
+child:hover .item-box {
+    background: rgba(100, 150, 255, 0.15); /* Neon blue hover effect */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 8px;
+}
+
+child:selected .item-box {
+    background: rgba(100, 150, 255, 0.3); /* Neon blue selected effect */
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(100, 150, 255, 0.3) inset;
+}
+
+child:selected .item-box * {
+    color: var(--foreground);
+}
+
+.item-box {
+    padding: 6px 10px;
+    margin: 1px 0;
+    border-radius: 8px;
+    transition: all 0.15s ease;
+    background: transparent;
+}
+
+.item-text-box {
+    all: unset;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.item-text {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+}
+
+.item-subtext {
+    font-size: 14px;
+    opacity: 0.6;
+    font-weight: 400;
+    margin-top: 1px;
+}
+
+.item-image {
+    margin-right: 0;
+    -gtk-icon-transform: scale(1);
+}
+
+.current {
+    font-style: normal;
+    font-weight: 600;
+    color: #ff79c6; /* Neon pink for the "current" item */
+}
+
+.keybind-hints {
+    background: rgba(10, 13, 22, 0.3);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    padding: 10px 14px;
+    margin-top: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15); /* Light border */
+    border-radius: 0 0 16px 16px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.preview {
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(12, 17, 29, 0.5); /* Darker background for preview */
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+}
+
+:root {
+    --selected-text: #ff79c6; /* Neon pink for selected text */
+    --text: #f8f8f2; /* Light text color */
+    --base: #0a0e1e; /* Dark base for background */
+    --border: #bd93f9; /* Light neon purple borders */
+    --foreground: #f8f8f2; /* Light text for foreground */
+    --background: #0a0e1e; /* Deep navy blue background */
+    --neon-blue: #76c7e3; /* Soft neon blue glow */
+    --neon-pink: #ff79c6; /* Neon pink accents */
+    --neon-green: #50fa7b; /* Neon green for emphasis */
+    --starry-glow: rgba(255, 255, 255, 0.25); /* Subtle glow effect for stars */
+}
