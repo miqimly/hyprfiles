@@ -1,0 +1,205 @@
+/* Color Scheme - Dark background with white text */
+@define-color background #0a0a0a;
+@define-color foreground #ffffff;
+@define-color accent #ffffff;
+@define-color warning #ffffff;
+@define-color critical #ff0000;
+@define-color success #ffffff;
+@define-color surface #0a0a0a;
+
+* {
+    background-color: transparent;
+    color: @foreground;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+window#waybar {
+    background-color: rgba(10, 10, 10, 0.5);
+}
+
+.modules-left {
+    margin-left: 2px;
+}
+
+.modules-right {
+    margin-right: 2px;
+}
+
+/* Workspace Styling - Flat, no boxes */
+#workspaces {
+    margin: 0;
+    padding: 0;
+}
+
+#workspaces button {
+    padding: 0 3px;
+    margin: 0;
+    background-color: transparent;
+    color: @foreground;
+    min-width: 15px;
+    transition: all 0.2s ease;
+    opacity: 0.5;
+}
+
+#workspaces button:hover {
+    background-color: transparent;
+    color: @foreground;
+    opacity: 1;
+}
+
+#workspaces button.active {
+    background-color: transparent;
+    color: @foreground;
+    font-weight: 400;
+    opacity: 1;
+}
+
+#workspaces button.urgent {
+    background-color: transparent;
+    color: @critical;
+    opacity: 1;
+}
+
+/* Launcher Icon */
+#custom-launcher {
+    font-size: 14px;
+    margin: 0 5px;
+    padding: 0;
+    color: @foreground;
+}
+
+/* Module Styling - No backgrounds, just text */
+#cpu,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#clock {
+    padding: 0 5px;
+    margin: 0 1px;
+    background-color: transparent;
+    color: @foreground;
+}
+
+#cpu:hover,
+#battery:hover,
+#pulseaudio:hover,
+#network:hover,
+#bluetooth:hover {
+    background-color: transparent;
+    color: @foreground;
+}
+
+/* Clock */
+#clock {
+    font-weight: 400;
+    color: @foreground;
+    padding: 0 6px;
+}
+
+/* CPU */
+#cpu {
+    color: @foreground;
+}
+
+/* Battery */
+#battery {
+    color: @foreground;
+}
+
+#battery.warning {
+    color: @foreground;
+}
+
+#battery.critical {
+    color: @critical;
+}
+
+#battery.charging {
+    color: @foreground;
+}
+
+/* Network */
+#network {
+    color: @foreground;
+}
+
+#network.disconnected {
+    color: @critical;
+}
+
+/* Bluetooth */
+#bluetooth {
+    color: @foreground;
+}
+
+#bluetooth.disabled {
+    color: @foreground;
+    opacity: 0.5;
+}
+
+/* Audio */
+#pulseaudio {
+    color: @foreground;
+}
+
+#pulseaudio.muted {
+    color: @critical;
+    opacity: 0.6;
+}
+
+/* System Tray */
+#tray {
+    margin: 0;
+    padding: 0 3px;
+    background-color: transparent;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+/* Expand Icon */
+#custom-expand-icon {
+    font-size: 12px;
+    margin: 0 2px;
+    padding: 0;
+    color: @foreground;
+}
+
+/* Tooltip */
+tooltip {
+    background-color: #1a1a1a;
+    color: @foreground;
+    border: 1px solid #333333;
+    padding: 4px;
+}
+
+tooltip label {
+    color: @foreground;
+}
+
+/* Drawer transition */
+.tray-item {
+    transition: all 0.3s ease;
+}
+
+/* Hyprland Window - Running app name */
+#window {
+    margin: 0 8px;
+    padding: 0;
+    color: @foreground;
+    font-weight: normal;
+    opacity: 0.8;
+}
